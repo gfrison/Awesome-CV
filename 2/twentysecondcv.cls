@@ -147,15 +147,15 @@
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
+\newcommand{\about}[1]{\renewcommand{\about}{#1}}
 
 % Command for printing the contact information icons
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
-\newcommand\programming[1]{ 
+\newcommand\programming[1]{
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
@@ -164,7 +164,7 @@
 		\end{tikzpicture}
 	}
 }
-\newcommand\education[1]{ 
+\newcommand\education[1]{
 	\renewcommand{\education}{
 		{#1}
 	}
@@ -184,82 +184,84 @@
   \begin{textblock}{6}(0.5, 0.2)
 
     %------------------------------------------------
-    
+
         \vspace{4mm}
-    {\Huge\color{pblue}\cvname}
-    
+    {\Large\color{pblue}\cvname}
+
     \vspace{2mm}
 
     %------------------------------------------------
-    
-    {\Large\color{black!80}\cvjobtitle}
+
+    {\large\color{black!80}\cvjobtitle}
 
     %------------------------------------------------
-    
+
     \vspace{3mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{4mm} \Huge \textnormal{\faMobile} 
+              \hspace{4mm} \Huge \textnormal{\faMobile}
               \end{array}
-              $} 
+              $}
             & \cvnumberphone\\}
-            
+
       \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
-              $} 
+              $}
             & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
-              $} 
+              $}
             & \href{mailto:\cvmail}{\cvmail} \\}
-      
+
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
-            }  
+            }
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }   
-            
+            }
+
     \end{tabular}
 
     %------------------------------------------------
     \vspace{3mm}
-    \profilesection{Technical Skills}{1.2cm}
-    
-    {\large \textbf{Overview}}
+    \about
+
+    % \profilesection{Technical Skills}{1.2cm}
+
+    {\large \textbf{Daily Activities}}
 
 	\skills
-        
+
         %------------------------------------------------
-        
+
         \vspace{3mm}
-       
-	 {\large \textbf{Programming}} 
+
+	 {\large \textbf{Skills}}
 
 		 \programming
-         
+
         \vspace{3mm}
-        \profilesection{Education}{3cm} 
-        
+        %\profilesection{Education}{3cm}
+
         \education
-      
+
   \end{textblock}
 }
 
@@ -313,7 +315,7 @@
 
 % \newcommand{\twentyitem}[5]{%
 % 	#1&\parbox[t]{0.83\textwidth}{%
-% 		\textbf{#2}% 
+% 		\textbf{#2}%
 % 		\hfill%
 % 		{\footnotesize#3}\\%
 %         \ifblank{#4}{}{#4 \\}
@@ -323,7 +325,7 @@
 
 \newcommand{\twentyitem}[6]{%
 	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#3}% 
+		\textbf{#3}%
 		\hfill%
 		{\footnotesize#4}%
         }\\%
@@ -380,4 +382,3 @@
     % sets the opacity at which the bubble text is shown
     bubble text opacity = 1,
 }
-
