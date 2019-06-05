@@ -243,9 +243,9 @@
     \vspace{3mm}
     \about
 
-    % \profilesection{Technical Skills}{1.2cm}
+    \profilesection{Daily Activities}{1.2cm}
 
-    {\large \textbf{Daily Activities}}
+    % {\large \textbf{Daily Activities}}
 
 	\skills
 
@@ -253,12 +253,13 @@
 
         \vspace{3mm}
 
-	 {\large \textbf{Skills}}
+%	 {\large \textbf{Skills}}
+\profilesection{Skills}{4.2cm}
 
 		 \programming
 
         \vspace{3mm}
-        %\profilesection{Education}{3cm}
+        \profilesection{Education}{2.7cm}
 
         \education
 
