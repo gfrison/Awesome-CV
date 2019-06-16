@@ -133,7 +133,7 @@
 \pgfmathsetlength{\imagewidth}{5cm}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
-\newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
+\newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \large #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
@@ -243,7 +243,7 @@
     \vspace{3mm}
     \about
 
-    \profilesection{Daily Activities}{1.2cm}
+    \profilesection{Daily Activities}{3.2cm}
 
     % {\large \textbf{Daily Activities}}
 
@@ -254,12 +254,12 @@
         \vspace{3mm}
 
 %	 {\large \textbf{Skills}}
-\profilesection{Skills}{4.2cm}
+\profilesection{Skills}{4.8cm}
 
 		 \programming
 
         \vspace{3mm}
-        \profilesection{Education}{2.7cm}
+        \profilesection{Education}{4.0cm}
 
         \education
 
