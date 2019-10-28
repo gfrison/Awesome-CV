@@ -133,8 +133,7 @@
     \newcommand*\inskip{}
     \renewcommand\item[1]{%
 	\inskip%
-	{\Large\textit{##1}}
-	\medskip
+	{\underline{##1}}
 	\renewcommand\inskip{\bigskip}}}
     {\bigskip}
 
@@ -151,6 +150,15 @@
 	\textsc{##2} & \textbf{##3} \\
 	\ifstrempty{##1}{}{& \textsc{##1} \\}
 	& \textit{##4}\medskip\\}
+    \tabularx{\linewidth}{rX}}
+    {\endtabularx}
+
+\newenvironment{edu}{%
+    \renewcommand\item[4][]{%
+    \textbf{\underline{Student:}}
+    &
+    \textbf{\underline{Supervisor:}} \\
+  }
     \tabularx{\linewidth}{rX}}
     {\endtabularx}
 
@@ -183,4 +191,3 @@
 }
 %%
 %% End of file `tccv.cls'.
-
