@@ -325,15 +325,22 @@
 % }
 
 \newcommand{\twentyitem}[6]{%
-	#1&\parbox[t]{0.83\textwidth}{%
+	#1&\parbox[t]{0.86\textwidth}{%
 		\textbf{#3}%
 		\hfill%
 		{\footnotesize#4}%
         }\\%
-    #2&\parbox[t]{0.83\textwidth}{%
+    #2&\parbox[t]{0.86\textwidth}{%
 		\ifblank{#5}{}{#5 \\}
 		#6%
 	}\\
+}
+\newcommand{\patent}[3]{%
+	#1&\parbox[t]{0.86\textwidth}{
+		#2%
+		\hfill%
+		{\footnotesize#3}
+	}\\%
 }
 
 %----------------------------------------------------------------------------------------
